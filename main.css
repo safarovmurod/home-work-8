@@ -287917,6 +287917,18 @@
   border-color: #515753;
 }
 
+.bg-n {
+  background-color: #949895;
+}
+
+.text-n {
+  color: #949895;
+}
+
+.bc-n {
+  border-color: #949895;
+}
+
 .bg-ee {
   background-color: #EEEEEE;
 }
@@ -287927,6 +287939,18 @@
 
 .bc-ee {
   border-color: #EEEEEE;
+}
+
+.bg-f {
+  background-color: #F0E7D9;
+}
+
+.text-f {
+  color: #F0E7D9;
+}
+
+.bc-f {
+  border-color: #F0E7D9;
 }
 
 .bg-tt {
