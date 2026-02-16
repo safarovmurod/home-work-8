@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+@for $i from 1 to 100 {
+    .wf-#{$i} {
+        width: #{$i * 1%};
+    }
+
+}
+.bx{
+    box-sizing: border-box;
+}
+@for $i from 1 to 1200 {
+    .w-#{$i} {
+        width: #{$i}px;
+    }
+
+    .h-#{$i} {
+        height: #{$i}px;
+    }
+
+    .m-#{$i} {
+        margin: #{$i}px;
+    }
+
+    .lh-#{$i} {
+        line-height: #{$i}px;
+    }
+
+    .lhf-#{$i} {
+        line-height: #{$i * 1%};
+    }
+
+    .mtm-#{$i} {
+        margin-top: #{-$i}px;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i}px;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{$i}px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+
+    .p-#{$i} {
+        padding: #{$i}px;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{$i}px;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{$i}px;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{$i}px;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{$i}px;
+    }
+
+    .b-#{$i} {
+        border: #{$i}px solid;
+    }
+
+    .bl-#{$i} {
+        border-left: #{$i}px solid;
+    }
+
+    .br-#{$i} {
+        border-right: #{$i}px solid;
+    }
+
+    .bb-#{$i} {
+        border-bottom: #{$i}px solid;
+    }
+
+    .brd-#{$i} {
+        border-radius: #{$i}px;
+    }
+
+    .brl-#{$i} {
+        border-top-left-radius: #{$i}px;
+        border-bottom-left-radius: #{$i}px;
+    }
+
+    .brr-#{$i} {
+        border-top-right-radius: #{$i}px;
+        border-bottom-right-radius: #{$i}px;
+    }
+
+    .fw-#{$i} {
+        font-weight: #{$i};
+    }
+
+    .g-#{$i} {
+        gap: #{$i}px;
+    }
+
+    .z-#{$i} {
+        z-index: #{$i};
+    }
+
+    .top-#{$i} {
+        top: #{$i}px;
+    }
+
+    .left-#{$i} {
+        left: #{$i}px;
+    }
+
+    .right-#{$i} {
+        right: #{$i}px;
+    }
+
+    .bottom-#{$i} {
+        bottom: #{$i}px;
+    }
+
+    .fz-#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
+$display: inline, block, inline-block, flex, grid, none;
+
+@each $i in $display {
+    .#{$i} {
+        display: $i;
+    }
+}
+
+@for $i from 1 to 12 {
+    .gtr-#{$i} {
+        grid-template-rows: repeat($i, 1fr);
+    }
+
+    .gtc-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+    }
+
+    .col-s-#{$i} {
+        grid-column-start: $i;
+    }
+
+    .col-e-#{$i} {
+        grid-column-end: $i;
+    }
+
+    .row-s-#{$i} {
+        grid-row-start: $i;
+    }
+
+    .row-e-#{$i} {
+        grid-row-end: $i;
+    }
+}
+
+@for $i from 1 to 12 {
+    @for $j from 1 to 800 {
+        .gtr-#{$i}-#{$j} {
+            grid-template-rows: repeat($i, $j*1px);
+        }
+
+        .gtrf-#{$i}-#{$j} {
+            grid-template-rows: repeat($i, $j*1%);
+        }
+
+        .gtc-#{$i}-#{$j} {
+            grid-template-columns: repeat($i, $j*1px);
+        }
+
+        .gtcf-#{$i}-#{$j} {
+            grid-template-columns: repeat($i, $j*1%);
+        }
+    }
+}
+
+.ma {
+    margin: auto;
+}
+
+.ps-a {
+    position: absolute;
+}
+
+.ps-f {
+    position: fixed;
+}
+
+.ps-r {
+    position: relative;
+}
+
+.ps-s {
+    position: sticky;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-s {
+    text-align: start;
+}
+
+.ta-e {
+    text-align: end;
+}
+
+$justify-map: (
+    s: start,
+    e: end,
+    c: center,
+    bw: space-between,
+    ad: space-around,
+    ev: space-evenly
+);
+
+@each $name, $value in $justify-map {
+    .jc-#{$name} {
+        justify-content: $value;
+    }
+}
+
+$ji-map: (
+    s: stretch,
+    c: center,
+    e: end
+);
+
+@each $name, $value in $ji-map {
+    .ji-#{$name} {
+        justify-items: $value;
+    }
+
+    .js-#{$name} {
+        justify-self: $value;
+    }
+}
+
+$align-map: (
+    s: start,
+    e: end,
+    c: center,
+    str: stretch
+);
+
+@each $name, $value in $align-map {
+    .ac-#{$name} {
+        align-content: $value;
+    }
+
+    .ai-#{$name} {
+        align-items: $value;
+    }
+
+    .as-#{$name} {
+        align-self: $value;
+    }
+}
+
+$td-map: (
+    n: none,
+    u: underline,
+    lt: line-through
+);
+
+@each $name, $value in $td-map {
+    .td-#{$name} {
+        text-decoration: $value;
+    }
+}
+
+$ov-map: (
+    h: hidden,
+    a: auto,
+    s: scroll,
+    v: visible
+);
+
+@each $name, $value in $ov-map {
+    .ov-#{$name} {
+        overflow: $value;
+    }
+}
+
+$colors: (
+    "sp": #1A3A27, 
+    "d": #313131,
+    "s": #3B9254,
+    "p":#429058,
+    "a":#1A3A27,
+    "w": #ffffff,
+    "b": #000000,
+    "gf": #F3EFE8,
+     "ss": #EAF5ED,
+    "but":#232120,
+    "f6":#F6F6F6,
+    "gr":rgba(128, 128, 128, 0.535),
+    "oe":#F0E7D9,
+    "vs":#515753,
+    "ee":#EEEEEE,
+    "tt":transparent
+);
+
+@each $name, $value in $colors {
+    .bg-#{$name} {
+        background-color: $value;
+    }
+
+    .text-#{$name} {
+        color: $value;
+    }
+
+    .bc-#{$name} {
+        border-color: $value;
+    }
+}
+
+$bg-image-map: (
+    "img1": "./pictures/img1.png",
+    "img2": "./pictures/img2.png"
+);
+
+.bn {
+    border: none;
+}
+
+.u {
+    text-transform: uppercase;
+}
+
+@each $name, $value in $bg-image-map {
+    .#{$name} {
+        background-image: url($value);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+$border-style-list: solid, dotted, dashed, double, inset, outset;
+
+@each $i in $border-style-list {
+    .bs-#{$i} {
+        border-style: $i;
+    }
+}
+
+@for $i from 0 to 100 {
+    .bw-#{$i} {
+        border-width: #{$i}px;
+    }
+
+    .px-#{$i} {
+        padding: 0px #{$i}px;
+    }
+
+    .py-#{$i} {
+        padding: #{$i}px 0px;
+    }
+
+    .br-#{$i} {
+        border-radius: #{$i}px;
+    }
+
+    .g-#{$i} {
+        gap: #{$i}px;
+    }
+
+}
+
+
+
+.flex-r {
+    flex-direction: row;
+}
+
+.flex-rr {
+    flex-direction: row-reverse;
+}
+
+.flex-c {
+    flex-direction: column;
+}
+
+.flex-cr {
+    flex-direction: column-reverse;
+}
+
+.flex-w {
+    flex-wrap: wrap;
+}
+
+.flex-nw {
+    flex-wrap: nowrap;
+}
+
+@for $i from 0 through 5 {
+    .fg-#{$i} {
+        flex-grow: #{$i};
+    }
+
+    .ord-#{$i} {
+        order: #{$i};
+    }
+}
+
+.ol-n {
+    outline: none;
+}
